@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WebApplication1.Models
+namespace GestionBiblioteca.Models
 {
     public class Usuario
     {
@@ -14,7 +14,8 @@ namespace WebApplication1.Models
         private string _email;
         private string _dni;
         private DateTime _fNacimiento;
-        private Guid _codigoUsuario;
+        private Guid _idUsuario;
+
         public Usuario()
         {
             this._nombre = "";
@@ -24,12 +25,12 @@ namespace WebApplication1.Models
             this._email = "";
             this._dni = "";
             this._fNacimiento = new DateTime();
-            this._codigoUsuario = new Guid("-1");
-            
+            this._idUsuario = new Guid("-1");
+
         }
-        public Usuario(string _nombre, string _dni, string _apellidos, string _password, string _user, string _email, DateTime _fNacimiento, Guid _codigoUsuario)
+        public Usuario(string _nombre, string _dni, string _apellidos, string _password, string _user, string _email, DateTime _fNacimiento, Guid _idUsuario)
         {
-           
+
             this._nombre = _nombre;
             this._apellidos = _apellidos;
             this._password = _password;
@@ -37,19 +38,19 @@ namespace WebApplication1.Models
             this._email = _email;
             this._dni = _dni;
             this._fNacimiento = _fNacimiento;
-            this._codigoUsuario = _codigoUsuario;
+            this._idUsuario = _idUsuario;
         }
 
         public Guid CodigoUsuario
         {
             get
             {
-                return _codigoUsuario;
+                return _idUsuario;
             }
 
             set
             {
-                _codigoUsuario = value;
+                _idUsuario = value;
             }
         }
 
