@@ -15,6 +15,7 @@ namespace GestionBiblioteca.Models
         private string _dni;
         private DateTime _fNacimiento;
         private Guid _idUsuario;
+        private IList<Prestamo> prestamos;
 
         public Usuario()
         {
@@ -26,9 +27,10 @@ namespace GestionBiblioteca.Models
             this._dni = "";
             this._fNacimiento = new DateTime();
             this._idUsuario = new Guid("-1");
+            this.prestamos = null;
 
         }
-        public Usuario(string _nombre, string _dni, string _apellidos, string _password, string _user, string _email, DateTime _fNacimiento, Guid _idUsuario)
+        public Usuario(string _nombre, string _dni, string _apellidos, string _password, string _user, string _email, DateTime _fNacimiento, Guid _idUsuario, IList<Prestamo> prestamos)
         {
 
             this._nombre = _nombre;
@@ -39,6 +41,7 @@ namespace GestionBiblioteca.Models
             this._dni = _dni;
             this._fNacimiento = _fNacimiento;
             this._idUsuario = _idUsuario;
+            this.prestamos = prestamos;
         }
 
         public Guid CodigoUsuario
@@ -142,6 +145,19 @@ namespace GestionBiblioteca.Models
             set
             {
                 _dni = value;
+            }
+        }
+
+        public IList<Prestamo> Prestamos
+        {
+            get
+            {
+                return prestamos;
+            }
+
+            set
+            {
+                prestamos = value;
             }
         }
     }

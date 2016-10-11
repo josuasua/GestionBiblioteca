@@ -129,6 +129,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="DAL\AutorRepository.cs" />
+    <Compile Include="DAL\EjemplarRepository.cs" />
     <Compile Include="DAL\UsuarioRepository.cs" />
     <Compile Include="DAL\UsuarioRepositoryImp.cs" />
     <Compile Include="Global.asax.cs">
